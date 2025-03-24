@@ -11,4 +11,11 @@ target_link_libraries(vehicle PRIVATE
 # 						SFML::Audio 
  						SFML::Main )
 
-#add_subdirectory("ut")
+
+add_executable(VehicleTests src/vehicle.cpp ut/ut_vehicle.cpp)
+
+# Link GoogleTest to your test targets
+target_link_libraries(VehicleTests gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(VehicleTests)

@@ -24,6 +24,36 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SFML)
 
+# TESTING ---
+# Add GoogleTest
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+# Add your main test executable
+#add_executable(
+#  GameTests
+#  ut/ut_game.cpp
+#)
+
+# Link GoogleTest to your test targets
+#target_link_libraries(
+#  GameTests
+#  gtest_main
+#)
+
+#include(GoogleTest)
+#gtest_discover_tests(GameTests)
+
+#--- TESTING
+
 # Copy assets
 add_custom_target(copy_assets
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/copy-assets.cmake
