@@ -1,8 +1,8 @@
 ﻿# Add source to this project's executable.
-add_executable (Daedalus_One "Daedalus_One.cpp" "Game.cpp" "physics/includes/physics.h")
+add_executable (Daedalus_One "Daedalus_One.cpp" "Game.cpp")
 
 # Headers
-target_include_directories(Daedalus_One PUBLIC "includes")
+target_include_directories(Daedalus_One PRIVATE includes vehicle/includes physics/includes)
 
 # Libraries
 target_link_libraries(Daedalus_One PRIVATE 

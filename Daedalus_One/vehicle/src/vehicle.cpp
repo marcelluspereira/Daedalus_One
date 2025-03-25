@@ -19,7 +19,7 @@ Vehicle::~Vehicle() {
 		delete sprite_;
 	}
 
-	(nullptr != texture_) ? delete sprite_ : 0;
+	(nullptr != texture_) ? delete texture_ : 0;
 }
 
 void Vehicle::Init() {

@@ -10,15 +10,17 @@
 #include "../includes/vehicle.h"
 #include <SFML/Graphics.hpp>
 
+using namespace  daedalus::vehicle;
+
 class VehicleTest : public ::testing::Test {
 protected:
     void SetUp() override {
-        vehicle_ = new daedalus::vehicle::Vehicle();
+        vehicle_ = new daedalus::vehicle::Vehicle("../../assets/fighter.png", sf::Vector2i(64, 64), 11, 5, 1.0f, 4000.0f);
         vehicle_->Init();
     }
 
     void TearDown() override {
-        delete vehicle_;
+        //delete vehicle_;
     }
 
     daedalus::vehicle::Vehicle* vehicle_;

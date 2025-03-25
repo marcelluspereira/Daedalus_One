@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.31)
 
-project ("Daedalus_One")
+project (Daedalus_One VERSION 0.1)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CXXFLAGS "/std:c++17")
@@ -35,7 +35,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-enable_testing()
+#enable_testing()
 
 # Add your main test executable
 #add_executable(
