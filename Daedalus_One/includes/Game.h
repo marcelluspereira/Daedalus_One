@@ -16,6 +16,8 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
+#include "map_manager.h"
+
 namespace daedalus {
 	const sf::Vector2u screen_size = sf::Vector2u(800U, 600U);
 
@@ -58,5 +60,6 @@ namespace daedalus {
 		void initWindow();
 		void initEnemies();
 		void initPlayer();
+		uint8_t initMap();
 	};
 }; // namespace daedalus

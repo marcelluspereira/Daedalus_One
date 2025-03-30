@@ -13,7 +13,10 @@ set(CMAKE_CXX_FLAGS "${CXXFLAGS}")
 add_subdirectory ("Daedalus_One")
 add_subdirectory ("Daedalus_One/vehicle")
 add_subdirectory ("Daedalus_One/physics")
+add_subdirectory ("Daedalus_One/map_manager")
 
+
+# SFML
 include(FetchContent)
 set(BUILD_SHARED_LIBS OFF)
 FetchContent_Declare(
@@ -24,7 +27,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SFML)
 
-# TESTING ---
+# VCPKG
+#-DCMAKE_TOOLCHAIN_FILE=C:/Users/marce/source/repos/vcpkg/scripts/buildsystems/vcpkg.cmake
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+#TESTING ---
 # Add GoogleTest
 include(FetchContent)
 FetchContent_Declare(

@@ -1,7 +1,7 @@
 /*****************************************************************//**
  * \file   Game.cpp
- * \brief  
- * 
+ * \brief
+ *
  * \author marce
  * \date   March 2025
  *********************************************************************/
@@ -10,6 +10,8 @@
 #include "Game.h"
 #include "Helpers.h"
 #include "vehicle.h"
+#include "tileson.hpp"
+#include "map_manager.h"
 
 
 #include <iostream>
@@ -20,8 +22,18 @@
 
 using namespace daedalus;
 
+
 // Creating the Fighter
 vehicle::Fighter* fighter_1 = new vehicle::Fighter("assets/fighter.png", { 64, 64 }, 11U, 5U, 1.0f, 4000.0f);
+map_manager::MapManager* mmanager = new map_manager::MapManager();
+
+uint8_t Game::initMap() {
+	// Creating the map
+	mmanager->initialize(this->window, "assets/maps/");
+
+	return 0;
+}
+
 
 void Game::initVariables()
 {
@@ -34,9 +46,9 @@ void Game::initVariables()
 
 void Game::initWindow()
 {
-	this->window = new sf::RenderWindow(sf::VideoMode(screen_size), 
-						"Daedalos One", 
-						sf::Style::Titlebar | sf::Style::Resize | sf::Style::Close);
+	this->window = new sf::RenderWindow(sf::VideoMode(screen_size),
+		"Daedalos One",
+		sf::Style::Titlebar | sf::Style::Resize | sf::Style::Close);
 	this->window->setFramerateLimit(60U);
 	this->window->setVerticalSyncEnabled(true);
 }
@@ -64,6 +76,7 @@ void Game::Init()
 	this->initVariables();
 	this->initWindow();
 	this->initEnemies();
+	this->initMap();
 
 	currentTime_ = this->deltaClock_.getElapsedTime().asSeconds();
 }
@@ -160,17 +173,38 @@ void Game::render()
 
 	//while (accumulator_ >= dt_) {
 
-		this->window->clear();
+	this->window->clear();
 
-		// Draw game objects
-		this->window->draw(this->enemy);
-		this->window->draw(*(fighter_1->GetSprite()));
+	mmanager->run();
 
-		this->window->display();
-		
+	// Draw game objects
+	this->window->draw(this->enemy);
+	this->window->draw(*(fighter_1->GetSprite()));
+
+	this->window->display();
+
 	//	accumulator_ -= dt_;
 
 	//	interpolation_ = accumulator_ / dt_;
 
 	//}
 }
+
+/*!
+ * Just a helper function to get the common path to the actual image files
+ * @param tileset
+ * @return
+ */
+template <typename T>
+fs::path getImagePath(const T& tileset)
+{
+	fs::path path = fs::path(fs::path("../") / tileset.getImage().filename());
+	return path;
+}
+
+
+
+
+
+
+

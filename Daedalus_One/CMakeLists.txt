@@ -2,7 +2,7 @@
 add_executable (Daedalus_One "Daedalus_One.cpp" "Game.cpp")
 
 # Headers
-target_include_directories(Daedalus_One PRIVATE includes vehicle/includes physics/includes)
+target_include_directories(Daedalus_One PRIVATE includes vehicle/includes physics/includes map_manager/includes)
 
 # Libraries
 target_link_libraries(Daedalus_One PRIVATE 
@@ -13,6 +13,6 @@ target_link_libraries(Daedalus_One PRIVATE
 						SFML::Audio 
 						SFML::Main 
 						vehicle
-						 )
+						map_manager)
 
 # TODO: Add tests and install targets if needed.

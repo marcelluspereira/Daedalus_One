@@ -1,0 +1,92 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Forest_Day.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "C:/Users/marce/Desktop/sample map and Tiled files/_gentle forest sample map.tmx": {
+            "scale": 3.4472426470588236,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 135.76067829147334,
+                "y": 79.91894630192499
+            }
+        },
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle 32x32 v01.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle forest v01.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle trees 80x96 v01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle water sparkles A v01.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle waterfall A v01.tsx": {
+            "scaleInDock": 1
+        },
+        "Forest_Day.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "test1.json": {
+            "scale": 0.9767187499999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 134.6344584866422,
+                "y": 312.78195488721815
+            }
+        },
+        "test1.tmj": {
+            "scale": 1.0509374999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 286.8867082961642,
+                "y": 311.6265239369611
+            }
+        },
+        "test1.tmx": {
+            "scale": 0.9767187499999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 417.21324588065914,
+                "y": 263.6378179491282
+            }
+        }
+    },
+    "last.exportedFilePath": "C:/Users/marce/source/repos/daedalusone/Daedalus_One/TileMaps",
+    "last.imagePath": "C:/Users/marce/Desktop/.petmp396E52/48x48 resize",
+    "lastUsedTilesetExportFilter": "JSON tileset files (*.tsj *.json)",
+    "map.height": 13,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "json",
+    "map.tileHeight": 48,
+    "map.tileWidth": 48,
+    "map.width": 20,
+    "openFiles": [
+        "Forest_Day.tsx",
+        "test1.tmx"
+    ],
+    "project": "daedalus.tiled-project",
+    "recentFiles": [
+        "test1.tmx",
+        "Forest_Day.tsx",
+        "test1.tmj",
+        "test1.json",
+        "C:/Users/marce/Desktop/sample map and Tiled files/_gentle forest sample map.tmx",
+        "C:/Users/marce/Desktop/sample map and Tiled files/gentle trees 80x96 v01.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 48,
+        "width": 48
+    }
+}
